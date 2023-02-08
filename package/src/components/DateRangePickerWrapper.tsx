@@ -24,24 +24,24 @@ const DateRangePickerWrapper: React.FunctionComponent<DateRangePickerWrapperProp
   props: DateRangePickerWrapperProps,
 ) => {
   const {
-    closeOnClickOutside,
+    // closeOnClickOutside,
     wrapperClassName,
-    toggle,
-    open,
+    // toggle,
+    // open,
   } = props;
 
-  const handleToggle = () => {
-    if (closeOnClickOutside === false) {
-      return;
-    }
+  // const handleToggle = () => {
+  //   if (closeOnClickOutside === false) {
+  //     return;
+  //   }
 
-    toggle();
-  };
+  //   toggle();
+  // };
 
-  const handleKeyPress = (event: any) => event?.key === 'Escape' && handleToggle();
+  // const handleKeyPress = (event: any) => event?.key === 'Escape' && handleToggle();
 
   return (
-    // <Box sx={{ position: 'relative' }}>
+     <Box sx={{ position: 'relative' }}>
       {/* {
         open && (
           <Box
@@ -64,7 +64,7 @@ const DateRangePickerWrapper: React.FunctionComponent<DateRangePickerWrapperProp
       <Box sx={{ position: 'relative', zIndex: 1 }} className={wrapperClassName} >
         <DateRangePicker {...props} />
       </Box>
-    // </Box>
+    </Box>
   );
 };
 
